@@ -1,0 +1,17 @@
+name: Parallel Tests Suite
+parallel: tests
+configFailurePolicy: skip
+tests:
+  - name: Chrome Tests
+  parallel: tests
+  parameters: { browser: chrome }
+  classes:
+    - NewTest
+    - LoginPageTest
+
+  - name: Firefox Tests
+  parallel: tests
+  parameters: { browser: firefox }
+  classes:
+    - NewTest
+

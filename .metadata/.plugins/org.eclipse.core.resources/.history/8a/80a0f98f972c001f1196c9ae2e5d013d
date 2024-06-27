@@ -1,0 +1,25 @@
+package com.interview.exception;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class PutPeopleInArray {
+
+	public static void main(String[] args) {
+		People p = new People();
+		p.setName("Shiva");
+		p.setAge(30);
+
+		p.setName("vinayaka");
+		p.setAge(39);
+		p.setName("Joshi");
+		p.setAge(40);
+		
+		List<String> namelist=new ArrayList();
+		namelist.add(p.getName());
+		
+		
+		
+	}
+
+}

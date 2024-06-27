@@ -1,0 +1,22 @@
+package SeleniumFeb2024;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class SelectDropdownHandling {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+WebDriver driver=new ChromeDriver();
+driver.get("htttps://orangehrms.com");
+By country=By.id("Form_getForm_Country");
+By employee=By.id("Form_getForm_NoOfEmployees");
+
+Select countrydropdown=new Select(driver.findElement(country));
+Select employeedropedown=new Select(driver.findElement(employee));
+
+	}
+
+}

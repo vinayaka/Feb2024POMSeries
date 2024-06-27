@@ -1,0 +1,30 @@
+package SeleniumFeb2024;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class GetAttributeList {
+
+	static ChromeDriver driver;
+	public static void main(String[] args) {
+		driver=	new ChromeDriver();
+		
+		driver.get("https:flipkart.com");
+		
+		By imges=By.tagName("img");
+		
+		List<WebElement> imglist=getWebElements(imges);
+		
+		for(WebElement e:imglist) {
+			String attrimag=e.getAttribute("img");
+			System.out.println(attrimag);
+		}
+	}
+	public static List<WebElement> getWebElements(By locator) {
+		return driver.findElements(locator);
+	}
+
+}

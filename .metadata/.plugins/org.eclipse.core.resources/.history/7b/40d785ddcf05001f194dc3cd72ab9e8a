@@ -1,0 +1,19 @@
+package SeleniumFeb2024;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class DropDownwithoutselect {
+	static ChromeDriver driver;
+	public static void main(String[] args) {
+		driver=	new ChromeDriver();
+		
+		driver.get("https://orangehrm.com/en/contact-sales/");
+		
+		By imges=By.tagName("img");
+		getAttributeList(imges,"alt");
+		TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,36 @@
+package com.demo;
+
+public class SortArray {
+
+	public static void main(String[] args) {
+		int[] a= {0,5,3,1,9};
+		for(int i=0;i<a.length;i++) {
+			for(int j=i+1;j<a.length;j++) {
+				//Smallest to largest
+				//compaire values to next index 
+				if(a[i]>a[j]) {
+					int temp=a[i];
+					a[i]=a[j];//swam between i and j
+					a[j]=temp;
+					
+				}
+			}
+			
+			}
+		for(int j=0;j<a.length;j++) {
+			System.out.println(a[j]);
+		}
+		System.out.println("=================");
+		for(int i=0;i<a.length/2;i++) {
+			
+			int temp=a[i];
+			a[i]=a[a.length-1-i];
+			a[a.length-1-i]=temp;
+		}
+		for(int k=0;k<a.length;k++) {
+			System.out.println(a[k]);
+		}
+
+	}
+
+}

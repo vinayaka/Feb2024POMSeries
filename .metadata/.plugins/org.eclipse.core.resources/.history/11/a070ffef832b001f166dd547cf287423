@@ -1,0 +1,27 @@
+package com.interview.exception;
+
+public class PushZeroAtEnd {
+
+	public static void main(String[] args) {
+		int[] a= {0,98,22,33,44,0,55};
+		
+		int count=0;
+		for(int i:a) {
+			if(i!=0) {
+				count++;
+				
+			}
+		}
+		System.out.println(count);
+		
+		for(int j=0;j<a.length;j++) {
+			if(a.length<count) {
+				a[j++]=0;
+			}
+		}
+for(int k=0;k<a.length;k++) {
+	System.out.println(a[k]);
+}
+	}
+
+}

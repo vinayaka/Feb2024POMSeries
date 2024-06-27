@@ -1,0 +1,33 @@
+package SeleniumFeb2024;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+public class ElementUtility {
+	
+	
+	
+	private WebDriver driver;
+	ElementUtility(WebDriver driver){
+		this.driver=driver;
+	}
+	public void doSendKeys(By locator,String input) {
+		GetElement(locator).sendKeys(input);
+	}
+	
+public WebElement GetElement(By locator) {
+	try {
+	return driver.findElement(locator);
+	}catch(NoSuchElementException  ex){
+		System.out.println("Element is not present on the page"+locator);
+		ex.printStackTrace();
+		return null;
+	}
+}
+
+public void doClick(By locator) {
+	GetElement(locator).click();
+}
+}

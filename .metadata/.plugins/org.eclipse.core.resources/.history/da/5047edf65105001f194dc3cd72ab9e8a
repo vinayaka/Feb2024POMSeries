@@ -1,0 +1,5 @@
+package SeleniumFeb2024;
+
+public class ElementException extends Exception {
+
+}

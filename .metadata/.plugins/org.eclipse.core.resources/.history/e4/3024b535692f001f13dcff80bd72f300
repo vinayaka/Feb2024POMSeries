@@ -1,0 +1,10 @@
+package files;
+
+public class ReUsableMethod {
+
+	public static void rawToJson(String response) {
+		JsonPath js=new JsonPath();
+		
+		
+	}
+}

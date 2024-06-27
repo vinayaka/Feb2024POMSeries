@@ -1,0 +1,12 @@
+package com.test.demo;
+
+public class RemoveTrailingspace {
+
+	public static void main(String[] args) {
+		String s="vinayaka ";
+		System.out.println(s);
+		String wihtoutspace=s.trim();
+		System.out.println(s);
+	}
+
+}

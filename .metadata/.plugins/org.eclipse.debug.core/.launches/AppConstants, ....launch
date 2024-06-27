@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.testng.eclipse.launchconfig">
+    <stringAttribute key="org.eclipse.jdt.launching.CLASSPATH_PROVIDER" value="org.eclipse.m2e.launchconfig.classpathProvider"/>
+    <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="org.testng.remote.RemoteTestNG"/>
+    <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="Feb2022POMSeries"/>
+    <stringAttribute key="org.eclipse.jdt.launching.SOURCE_PATH_PROVIDER" value="org.eclipse.m2e.launchconfig.sourcepathProvider"/>
+    <mapAttribute key="org.testng.eclipse.ALL_CLASS_METHODS"/>
+    <listAttribute key="org.testng.eclipse.CLASS_TEST_LIST">
+        <listEntry value="com.qa.opencart.exceptions.FrameWorkException"/>
+        <listEntry value="com.qa.opencart.pages.ProdcutInfoPage"/>
+        <listEntry value="com.qa.opencart.util.JavaScriptUtil"/>
+        <listEntry value="com.qa.opencart.util.TimeUtil"/>
+        <listEntry value="com.qa.opencart.tests.RegisterPageTest"/>
+        <listEntry value="com.qa.opencart.util.CSVUtil"/>
+        <listEntry value="com.qa.opencart.base.BaseTest"/>
+        <listEntry value="com.qa.opencart.tests.AccountsPageTest"/>
+        <listEntry value="com.qa.opencart.pages.SearchresultPage"/>
+        <listEntry value="com.qa.opencart.constants.AppConstants"/>
+        <listEntry value="com.qa.opencart.util.ElementUtil"/>
+        <listEntry value="com.qa.opencart.pages.RegisterPage"/>
+        <listEntry value="com.qa.opencart.tests.ProductInfoPageTest"/>
+        <listEntry value="com.qa.opencart.exceptions.BrowseException"/>
+        <listEntry value="com.qa.opencart.pages.AccountPage"/>
+        <listEntry value="com.qa.opencart.exceptions.ElementException"/>
+        <listEntry value="com.qa.opencart.util.ExcelUtil"/>
+        <listEntry value="com.qa.opencart.listeners.ExtentReportListener"/>
+        <listEntry value="com.qa.opencart.tests.LoginPageTest"/>
+        <listEntry value="com.qa.opencart.factory.DriverFactory"/>
+        <listEntry value="com.qa.opencart.pages.LoginPage"/>
+        <listEntry value="com.qa.opencart.errors.AppError"/>
+        <listEntry value="com.qa.opencart.util.StringUtils"/>
+    </listAttribute>
+    <listAttribute key="org.testng.eclipse.METHOD_TEST_LIST"/>
+    <listAttribute key="org.testng.eclipse.PACKAGE_TEST_LIST"/>
+    <stringAttribute key="org.testng.eclipse.PRE_DEFINED_LISTENERS" value=""/>
+    <intAttribute key="org.testng.eclipse.TYPE" value="1"/>
+</launchConfiguration>

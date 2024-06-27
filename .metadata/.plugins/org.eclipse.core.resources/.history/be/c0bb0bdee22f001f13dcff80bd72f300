@@ -1,0 +1,14 @@
+package files;
+
+import io.restassured.path.json.JsonPath;
+
+public class ComplexJsonParse {
+
+	public static void main(String[] args) {
+		
+		
+		JsonPath j=new JsonPath(loadpayload.CoursePrice());
+
+	}
+
+}

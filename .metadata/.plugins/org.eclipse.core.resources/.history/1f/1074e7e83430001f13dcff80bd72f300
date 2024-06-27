@@ -1,0 +1,104 @@
+package com.qa.opencart.factory;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Properties;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.safari.SafariDriver;
+
+import com.qa.opencart.constants.AppConstants;
+import com.qa.opencart.errors.AppError;
+import com.qa.opencart.exceptions.BrowseException;
+import com.qa.opencart.exceptions.FrameWorkException;
+
+
+public class DriverFactory {
+	WebDriver driver;
+	 Properties prop;
+	public static ThreadLocal<WebDriver> tlDriver=new ThreadLocal<WebDriver>();
+	
+	public WebDriver initDriver(Properties prop) {
+		//cross browser logic
+		String browsername=prop.getProperty("browser");
+		switch (browsername.toLowerCase().trim()) {
+		case "chrome":
+			//driver=new ChromeDriver();
+			tlDriver.set(new ChromeDriver());
+			break;
+		case "firefox":
+			//driver=new FirefoxDriver();
+			tlDriver.set(new FirefoxDriver());
+			break;
+		case "edge":
+			//driver=new EdgeDriver();
+			tlDriver.set(new EdgeDriver());
+			break;
+		case "safari":
+			//driver=new SafariDriver();
+			tlDriver.set(nnew SafariDriver());
+			break;
+
+
+		default:
+			System.out.println("plz pass the right browser name..." + browsername);
+			throw new BrowseException(AppError.BROWSER_NOT_FOUND);
+		}
+		driver.manage().deleteAllCookies();
+		driver.manage().window().maximize();
+		driver.get(prop.getProperty("URL"));
+		return driver;
+	}
+public Properties initProp() {
+	//cross prop
+	try {
+		//mvn clean install -Denv="env"
+	prop=new Properties();
+	String envname=System.getProperty("env");
+	FileInputStream ip=null;
+	System.out.println("Running test in=>"+envname);
+	if(envname==null) {
+		System.out.println("Envirnent name is null, hence running it on QA Envirnment");
+		ip=new FileInputStream(AppConstants.CONFIG_QA_FILE_CONST);
+	}
+	else {
+	switch (envname.toLowerCase().trim()) {
+	case "qa":
+	ip=new FileInputStream(AppConstants.CONFIG_QA_FILE_CONST);
+		break;
+case "dev":
+	ip=new FileInputStream(AppConstants.CONFIG_Dev_FILE_CONST);
+		break;
+case "stag":
+	ip=new FileInputStream(AppConstants.CONFIG_STAG_FILE_CONST);
+	break;
+case "Prod":
+	 ip=new FileInputStream(AppConstants.CONFIG_FILE_CONST);
+	break;
+
+
+	default:
+		System.out.println("Please pass right Env name"+envname);
+		throw new FrameWorkException("Wrong Env Name");
+		
+	}
+
+	
+		prop.load(ip);
+	}
+	} catch (FileNotFoundException e) {
+		
+		e.printStackTrace();
+	} catch (IOException e) {
+		
+		e.printStackTrace();
+	}
+	return prop;
+	
+}
+
+}

@@ -1,0 +1,14 @@
+package com.demo;
+
+public class Demo {
+
+	public static void main(String[] args) {
+		String str = "hello world";
+		
+		String[] strarray=str.split(" ");
+		for(String s: strarray) {
+			System.out.println(s.substring(0,1).toUpperCase()+s.substring(1, s.length()));
+		}
+	}
+
+}

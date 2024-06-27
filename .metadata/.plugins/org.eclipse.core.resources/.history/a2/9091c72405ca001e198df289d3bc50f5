@@ -1,0 +1,10 @@
+package com.test.hello;
+
+public class CountuppercaeLowercase {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

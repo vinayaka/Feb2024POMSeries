@@ -1,0 +1,26 @@
+package SeleniumFeb2024;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class TotalLinks {
+
+	public static void main(String[] args) {
+ChromeDriver driver=	new ChromeDriver();
+		
+		driver.get("https://naveenautomationlabs.com/opencart/index.php?route=account/login");
+		
+		List<WebElement> li=driver.findElements(By.tagName("a"));
+		for(WebElement e:li) {
+			System.out.println(e);
+		}
+		
+	}
+
+
+	}
+
+

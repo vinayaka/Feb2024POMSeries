@@ -1,0 +1,18 @@
+package com.demo;
+
+public class Demo {
+
+	public static void main(String[] args) {
+		String str = "hello world";
+		
+		String[] strarray=str.split(" ");
+		String out="";
+		for(String s: strarray) {
+			//System.out.print(s.substring(0,1).toUpperCase()+s.substring(1, s.length()));
+			out=s.substring(0,1).toUpperCase()+s.substring(1, s.length());
+			System.out.println(out);
+		}
+		
+	}
+
+}
